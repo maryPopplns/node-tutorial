@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast.js');
 const chalk = require('chalk');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //defined paths
 const public = path.join(__dirname, '../public');
@@ -96,6 +97,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('server listening on port 3000');
+app.listen(port, () => {
+  console.log(`server listening on port ${port}`);
 });
