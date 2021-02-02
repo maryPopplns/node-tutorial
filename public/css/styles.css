@@ -53,3 +53,8 @@ button {
   color: white;
   padding: 8px;
 }
+
+.text-output {
+  color: rgb(0, 0, 0);
+  font: ariel;
+}
