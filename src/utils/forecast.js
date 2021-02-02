@@ -14,13 +14,11 @@ const forecast = (lat, lon, callback) => {
     } else if (body.error) {
       callback('location unavailable, please try another');
     } else {
+      let location = body.location.region;
+      let time = body.current.observation_time;
       let temp = body.current.temperature;
-      let feelsLike = body.current.feelslike;
 
-      callback(
-        undefined,
-        `is currently ${temp} degrees out. It feels like ${feelsLike} degrees out`
-      );
+      callback(undefined, `${time} / ${location} / ${temp} degrees`);
     }
   });
 };

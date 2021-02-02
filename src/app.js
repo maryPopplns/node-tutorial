@@ -69,6 +69,7 @@ app.get('/weather', (req, res) => {
       if (err) {
         return console.log(chalk.inverse('Error :', err));
       }
+      // console.log(forecastData);
       res.send({
         location: name,
         forecastData,
